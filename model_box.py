@@ -33,7 +33,7 @@ q2 = -1.602_176_634e-19
 X = 0.0005  # длины стенок по координатам в м
 Y = 0.0005
 Z = 0.0005
-Q = -1.602_176_634e-15  # заряд стенки в Кл
+Q = -1.602_176_634e-19  # заряд стенки в Кл
 
 c = 299_792_458  # скорость света по СИ (м/с)
 m0 = 4 * np.pi * 10**(-7)  # магнитная постоянная (Гн/м)
@@ -86,15 +86,15 @@ def Equations(params, t, k, q1, q2):
     return derivs
 
 
-params = np.array([r1, r2, v1, v2])
-params = params.flatten()
-time_arr = np.linspace(0, 0.005, 10000)  # шаги по времени: старт, стоп, количество шагов
+params = np.array([r1, r2, v1, v2])  # массив координат и векторов скоростей
+params = params.flatten()  # одномерный np.array
+time_arr = np.linspace(0, 0.5, 1000)  # шаги по времени: старт, стоп, количество шагов
 sol = scipy.integrate.odeint(Equations,  # уравнения движения частиц
                            params,  # основные параметры (координаты и скорости)
                            time_arr,  # шаги по времени
                            args=(k, q1, q2))  # дополнительные параметры
-r1_sol = sol[:,:3]
-r2_sol = sol[:,3:6]
+r1_sol = sol[:,0:3]  # полученные точки решения для частицы 1
+r2_sol = sol[:,3:6]  # для частицы 2
 
 # график
 fig = plt.figure(figsize=(6, 6))  # размер полотна
@@ -112,12 +112,14 @@ ax.plot([0, 0], [0, 0], [0, Z], color="orange")  # Z рёбра
 ax.plot([X, X], [0, 0], [0, Z], color="orange")
 ax.plot([0, 0], [Y, Y], [0, Z], color="orange")
 ax.plot([X, X], [Y, Y], [0, Z], color="orange")
+M = max(X, Y, Z)  # точка максимальной длины стенки для единого масштаба осей
+ax.scatter(M, M, M, color="orange")  # угловая точка по всем осям
 # кривые движения частиц
 ax.plot(r1_sol[:, 0], r1_sol[:, 1], r1_sol[:, 2], color="b")
 ax.plot(r2_sol[:, 0], r2_sol[:, 1], r2_sol[:, 2], color="r")
-# точки останова частиц
-ax.scatter(r1_sol[-1, 0], r1_sol[-1, 1], r1_sol[-1, 2], color="b", label="частица 1")
-ax.scatter(r2_sol[-1, 0], r2_sol[-1, 1], r2_sol[-1, 2], color="r", label="частица 2")
+# конечные положения частиц
+ax.scatter(r1_sol[-1, 0], r1_sol[-1, 1], r1_sol[-1, 2], color="b", label="электрон 1")
+ax.scatter(r2_sol[-1, 0], r2_sol[-1, 1], r2_sol[-1, 2], color="r", label="электрон 2")
 # подписи
 ax.set_xlabel("x", fontsize=14)  # ось x
 ax.set_ylabel("y", fontsize=14)  # ось y
