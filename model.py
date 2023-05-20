@@ -23,13 +23,6 @@ v2 = [-0.003, -0.003, -0.001]
 v1 = np.array(v1, dtype="float64")  # перевод в np.array
 v2 = np.array(v2, dtype="float64")
 
-s1 = np.array([[r1[0]],
-               [r1[1]],
-               [r1[2]]], 'float64')  # пройденный путь по координатам
-s2 = np.array([[r2[0]],
-               [r2[1]],
-               [r2[2]]], 'float64')
-
 m1 = 9.109_383_7015e-31  # масса электрона в кг
 m2 = 9.109_383_7015e-31
 
@@ -72,10 +65,10 @@ r2_sol = sol[:,3:6]
 # график
 fig = plt.figure(figsize=(7, 7))  # размер полотна
 ax = fig.add_subplot(111, projection="3d")  # 3D-проекция
-# кривые
+# кривые движения частиц
 ax.plot(r1_sol[:, 0], r1_sol[:, 1], r1_sol[:, 2], color="b")
 ax.plot(r2_sol[:, 0], r2_sol[:, 1], r2_sol[:, 2], color="r")
-# точки останова
+# точки останова частиц
 ax.scatter(r1_sol[-1, 0], r1_sol[-1, 1], r1_sol[-1, 2], color="b", label="частица 1")
 ax.scatter(r2_sol[-1, 0], r2_sol[-1, 1], r2_sol[-1, 2], color="r", label="частица 2")
 # подписи
