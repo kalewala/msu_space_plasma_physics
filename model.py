@@ -70,12 +70,12 @@ ax.plot(r1_sol[:, 0], r1_sol[:, 1], r1_sol[:, 2], color="b")
 ax.plot(r2_sol[:, 0], r2_sol[:, 1], r2_sol[:, 2], color="r")
 # точки останова частиц
 ax.scatter(r1_sol[-1, 0], r1_sol[-1, 1], r1_sol[-1, 2],
-           color="b", label=f"Частица 1, v={round(np.linalg.norm(v1), 2)} м/с")
+           color="b", label=f"Частица 1, v = {round(np.linalg.norm(v1), 2)} м/с")
 ax.scatter(r2_sol[-1, 0], r2_sol[-1, 1], r2_sol[-1, 2],
-           color="r", label=f"Частица 2, v={round(np.linalg.norm(v2), 2)} м/с")
+           color="r", label=f"Частица 2, v = {round(np.linalg.norm(v2), 2)} м/с")
 # подписи
 ax.set_title("Кулоновское взаимодействие двух частиц (электронов)\nметод частица-частица")  # заголовок
-ax.legend(loc="upper left", title=f"t={Tend}")  # легенда
+ax.legend(loc="upper left", title=f"t = {Tend}")  # легенда
 ax.set_xlabel("x", fontsize=14)  # ось x
 ax.set_ylabel("y", fontsize=14)  # ось y
 ax.set_zlabel("z", fontsize=14)  # ось z
