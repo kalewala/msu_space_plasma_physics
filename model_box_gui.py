@@ -15,7 +15,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolb
 c = 299_792_458  # скорость света по СИ (м/с)
 m0 = 4 * np.pi * 10**(-7)  # магнитная постоянная (Гн/м)
 e0 = 1/(m0 * c**2)  # электричекая постоянная
-k = 1/(4 * np.pi * e0)  # диэлектрическая проницаемость среды
+k = 1/(4 * np.pi * e0)  # коэффициент пропорциональности
 
 # уравнения Кулона
 def CoulombsEquations(params, t, k, q1, q2):
