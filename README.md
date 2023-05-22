@@ -7,9 +7,9 @@
 $$\mathnormal{F} = \mathnormal{k} \frac{\mathnormal{q_{1}q_{2}}}{\mathnormal{r^{2}}}$$
 где $\mathnormal{F}$ – сила взаимодействия между зарядами, $\mathnormal{k}$ – коэффициент пропорциональности (постоянная Кулона), $\mathnormal{q_{1}}$ и $\mathnormal{q_{2}}$ – величина зарядов (со знаком), $\mathnormal{r}$ – расстояние между зарядами.
 В системе СИ величина ампера определена таким образом, что коэффициент $\mathnormal{k} = \mathnormal{c}^{2} \cdot 10^{-7}\text{Гн/м} = 8{,}9875517873681764 \cdot 10^{9}\text{Н} \cdot \text{м}^{2}/\text{Кл}^{2}$ (или $\text{Ф}^{-1} \cdot \text{м}$) и определяется по формуле:
-$$\mathnormal{k} = \frac{1}{4 \pi \varepsilon _{0}}$$
+$$\mathnormal{k} = \frac{1}{4\pi \varepsilon _{0}}$$
 где $\varepsilon _{0} \approx 8{,}85418781762 \cdot 10^{12} \text{Ф/м}$ – электрическая постоянная. По определению в СИ электрическая постоянная $\varepsilon _{0}$ связана со скоростью света $\mathnormal{c}$ и магнитной постоянной $\mu _{0}$ соотношением:
-$$$\varepsilon _{0} = \frac{1}{\mu _{0}\mathnormal{c}^{2}}$$
+$$\varepsilon _{0} = \frac{1}{\mu _{0}\mathnormal{c}^{2}}$$
 Скорость света определяется как константа и равна по СИ 299792458 м/с. Магнитной постоянной соотвутствует равенство $\mu _{0} = 4 \pi \cdot 10^{-7}\text{Гн/м}$, то есть $\mu _{0} \approx 1{,}2566370614 \cdot 10^{-6}\text{Н/А}^{2}$.
 В векторном виде сила, с которой заряд $\mathnormal{q_{1}}$ действует на заряд $\mathnormal{q_{2}}$ определеяется по формуле:
 $$\mathnormal{\vec{F}_{12}} = \mathnormal{k} \cdot \frac{\mathnormal{q}_{1} \cdot \mathnormal{q}_{2}}{\mathnormal{r_{12}^{2}}} \cdot \frac{\mathnormal{\vec{r}_{12}}}{\mathnormal{r_{12}}}$$
