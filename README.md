@@ -22,4 +22,4 @@ $$\varepsilon _{0} = \frac{1}{\mu _{0}\mathnormal{c}^{2}}$$
 
 $$\mathnormal{\vec{F}}_{12} = \mathnormal{k} \cdot \frac{\mathnormal{q}_{1} \cdot \mathnormal{q}_{2}}{\mathnormal{r_{12}^{2}}} \cdot \frac{\mathnormal{\vec{r}}_{12}}{\mathnormal{r_{12}}}$$
 
-где $\mathnormal{\vec{F}}_{12}$ – сила, с которой заряд 1 действует на заряд 2, $\mathnormal{\vec{r}}_{12}$ –  вектор, направленный от заряда 1 к заряду 2 и по модулю равный расстоянию между зарядами ($\mathnormal{r_{12}}$). 
+где $\vec{\mathnormal{F}} _{12}$ – сила, с которой заряд 1 действует на заряд 2, $\mathnormal{\vec{r}} _{12}$ –  вектор, направленный от заряда 1 к заряду 2 и по модулю равный расстоянию между зарядами ($\mathnormal{r_{12}}$). 
