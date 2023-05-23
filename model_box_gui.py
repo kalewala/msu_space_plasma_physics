@@ -184,13 +184,13 @@ label_q.grid(row=9, column=1, columnspan=2)
 label_q1 = Label(text="Частица 1:")
 label_q1.grid(row=10, column=1, sticky="e")
 entry_q1 = Entry(root, width=20)
-entry_q1.insert(0,"-1.602_176_634e-19")  # значения по умолчанию
+entry_q1.insert(0,"-1.602_176_634e-19")  # значение по умолчанию
 entry_q1.grid(row=10, column=2)
 
 label_q2 = Label(text="Частица 2:")
 label_q2.grid(row=11, column=1, sticky="e")
 entry_q2 = Entry(root, width=20)
-entry_q2.insert(0,"-1.602_176_634e-19")  # значения по умолчанию
+entry_q2.insert(0,"-1.602_176_634e-19")  # значение по умолчанию
 entry_q2.grid(row=11, column=2)
 
 label_m = Label(text="Массы частиц (кг):")
@@ -199,13 +199,13 @@ label_m.grid(row=12, column=1, columnspan=2)
 label_m1 = Label(text="Частица 1:")
 label_m1.grid(row=13, column=1, sticky="e")
 entry_m1 = Entry(root, width=20)
-entry_m1.insert(0,"9.109_383_7015e-31")  # значения по умолчанию
+entry_m1.insert(0,"9.109_383_7015e-31")  # значение по умолчанию
 entry_m1.grid(row=13, column=2)
 
 label_m2 = Label(text="Частица 2:")
 label_m2.grid(row=14, column=1, sticky="e")
 entry_m2 = Entry(root, width=20)
-entry_m2.insert(0,"9.109_383_7015e-31")  # значения по умолчанию
+entry_m2.insert(0,"9.109_383_7015e-31")  # значение по умолчанию
 entry_m2.grid(row=14, column=2)
 
 label_box = Label(text="Параметры контейнера:")
@@ -214,25 +214,25 @@ label_box.grid(row=15, column=1, columnspan=2)
 label_X = Label(text="Длина (X):")
 label_X.grid(row=16, column=1, sticky="e")
 entry_X = Entry(root, width=20)
-entry_X.insert(0,"0.1")  # значения по умолчанию
+entry_X.insert(0,"0.1")  # значение по умолчанию
 entry_X.grid(row=16, column=2)
 
 label_Y = Label(text="Ширина (Y):")
 label_Y.grid(row=17, column=1, sticky="e")
 entry_Y = Entry(root, width=20)
-entry_Y.insert(0,"0.1")  # значения по умолчанию
+entry_Y.insert(0,"0.1")  # значение по умолчанию
 entry_Y.grid(row=17, column=2)
 
 label_Z = Label(text="Высота (Z):")
 label_Z.grid(row=18, column=1, sticky="e")
 entry_Z = Entry(root, width=20)
-entry_Z.insert(0,"0.1")  # значения по умолчанию
+entry_Z.insert(0,"0.1")  # значение по умолчанию
 entry_Z.grid(row=18, column=2)
 
 label_Q = Label(text="Заряд стенок (Кл):")
 label_Q.grid(row=19, column=1, sticky="e")
 entry_Q = Entry(root, width=20)
-entry_Q.insert(0,"-1.602_176_634e-19")  # значения по умолчанию
+entry_Q.insert(0,"-1.602_176_634e-19")  # значение по умолчанию
 entry_Q.grid(row=19, column=2)
 
 label_time = Label(text="Время интегрирования (с):")
@@ -241,19 +241,20 @@ label_time.grid(row=20, column=1, columnspan=2)
 label_t0 = Label(text="Начальное время:")
 label_t0.grid(row=21, column=1, sticky="e")
 entry_t0 = Entry(root, width=20)
-entry_t0.insert(0,"0")  # значения по умолчанию
+entry_t0.insert(0, "0")  # значение по умолчанию
+entry_t0.config(state="readonly")  # запрет изменения
 entry_t0.grid(row=21, column=2)
 
 label_Tend = Label(text="Конечное время:")
 label_Tend.grid(row=22, column=1, sticky="e")
 entry_Tend = Entry(root, width=20)
-entry_Tend.insert(0,"0.005")  # значения по умолчанию
+entry_Tend.insert(0,"0.005")  # значение по умолчанию
 entry_Tend.grid(row=22, column=2)
 
 label_N = Label(text="Шаги по времени:")
 label_N.grid(row=23, column=1, sticky="e")
 entry_N = Entry(root, width=20)
-entry_N.insert(0,"1000")  # значения по умолчанию
+entry_N.insert(0,"1000")  # значение по умолчанию
 entry_N.grid(row=23, column=2)
 
 # кнопка для вызова функции отрисовки графика
@@ -267,5 +268,5 @@ run.grid(row=24, column=2)#, sticky='e')
 
 
 if __name__ == "__main__":
-    RunGraph()
+    RunGraph()  # расчёт модели по умлочанию при запуске
     root.mainloop()  # запуск цикла событий для окна
